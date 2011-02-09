@@ -2,36 +2,18 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package org.pangratz.couchapp;
 
-import java.io.File;
-import java.io.IOException;
-import junit.framework.TestCase;
+package org.pangratz.couchapp;
 
 /**
  *
  * @author clemens
  */
-public class RuntimeCouchAppUtilityTest extends TestCase {
-
-    private ICouchAppUtility couchAppUtil;
+public class RuntimeCouchAppUtilityTest extends ICouchAppUtilityTest {
 
     @Override
-    protected void setUp() throws Exception {
-        super.setUp();
-
-        couchAppUtil = new RuntimeCouchAppUtility();
+    protected ICouchAppUtility getCouchAppUtility() {
+        return new RuntimeCouchAppUtility();
     }
 
-    public void testGenerateApp() throws IOException {
-        File tmpFile = File.createTempFile("tmpDirPrefix", "suffix");
-
-        File parent = tmpFile.getParentFile();
-        parent = new File("/tmp/tmpocuhapp");
-        couchAppUtil.generateApp(parent.getPath(), "tmpCouchApp");
-
-        // check if the app structure has been created
-        File couchappJsonFile = new File(parent, "couchapp.json");
-        assertTrue("there is no couchapp.json", couchappJsonFile.exists());
-    }
 }
