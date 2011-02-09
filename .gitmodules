@@ -1,0 +1,3 @@
+[submodule "src/main/resources/couchapp"]
+	path = src/main/resources/couchapp
+	url = https://github.com/couchapp/couchapp.git
