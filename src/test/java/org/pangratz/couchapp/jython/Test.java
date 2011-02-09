@@ -2,17 +2,18 @@ package org.pangratz.couchapp.jython;
 
 import java.net.URL;
 import java.util.Properties;
+import junit.framework.TestCase;
 import org.python.core.Py;
 import org.python.core.PyString;
 import org.python.core.PySystemState;
 import org.python.util.PythonInterpreter;
 
-public class App {
+public class Test extends TestCase {
 
-    public static void main(String[] args) {
+    public void test() {
 
         // get the absolute OS path to couchapp package in src/main/resources/couchapp
-        URL couchappURL = App.class.getResource("/couchapp");
+        URL couchappURL = Test.class.getResource("/couchapp");
         String couchappPath = couchappURL.getPath();
 
         // initialize python env
@@ -29,7 +30,7 @@ public class App {
 
         // add the couchapp pyton files
         engineSys.path.append(new PyString(couchappPath));
-        
+
         Py.setSystemState(engineSys);
 
         PythonInterpreter interp = new PythonInterpreter(null, engineSys);
