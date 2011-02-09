@@ -1,6 +1,3 @@
 [submodule "src/main/resources/couchapp"]
 	path = src/main/resources/couchapp
 	url = https://github.com/couchapp/couchapp.git
-[submodule "src/main/resources/restkit"]
-	path = src/main/resources/restkit
-	url = https://github.com/benoitc/restkit.git
