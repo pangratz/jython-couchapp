@@ -1,17 +1,9 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package org.pangratz.couchapp;
 
 import java.io.File;
 import java.io.IOException;
 import junit.framework.TestCase;
 
-/**
- *
- * @author clemens
- */
 public abstract class ICouchAppUtilityTest extends TestCase {
 
     private ICouchAppUtility couchAppUtil;
